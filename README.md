@@ -15,15 +15,17 @@ cd ~/projects/config
 
 ## What's Included
 
-### Shell
-- Zsh with Oh My Zsh (robbyrussell theme)
-- Plugins: git, z, zsh-autosuggestions, zsh-syntax-highlighting, zsh-completions
-- Custom aliases for navigation, git, and safety
+### Shell (Zsh)
+- Oh My Zsh with robbyrussell theme
+- Plugins: git, z, node, npm, yarn, nvm, macos, brew, and more
+- External plugins: zsh-autosuggestions, zsh-syntax-highlighting, zsh-completions
 - fzf integration (Ctrl+R history, Ctrl+T files)
 - eza/bat for better ls/cat
+- Custom aliases for navigation, git, and safety
 
 ### Git
 - Sensible defaults (rebase on pull, auto-upstream)
+- Global gitignore for common files
 - 20+ aliases (`git s`, `git lg`, `git cob`, `git undo`, etc.)
 - VSCode as default editor
 
@@ -33,10 +35,17 @@ cd ~/projects/config
 - Quick terminal (Cmd+`) drop-down
 - Split panes and tab keybindings
 
+### Vim
+- Line numbers (relative)
+- 4-space tabs
+- Smart search (case-insensitive unless capitals used)
+- Syntax highlighting
+
 ### Editor (VSCode)
 - Night Owl theme with Fira Code font
 - Vim keybindings with custom leader key mappings
 - Minimalist UI (no minimap, breadcrumbs, or decorations)
+- Extensions: Volar (Vue), ESLint, Copilot, Astro, MDX, Mermaid, Slidev
 
 ### CLI Tools (via Homebrew)
 - `fnm` - Fast Node Manager
@@ -46,6 +55,7 @@ cd ~/projects/config
 - `fzf` - Fuzzy finder
 - `bat`, `eza` - Better cat/ls
 - `jq`, `httpie` - JSON/API tools
+- `tldr` - Simplified man pages
 
 ### Applications
 - Ghostty (terminal)
@@ -58,10 +68,10 @@ cd ~/projects/config
 
 ### macOS Defaults
 - Fast key repeat
-- Tap to click
+- Tap to click, three-finger drag
 - Finder: show extensions, path bar, list view
 - Dock: auto-hide, no recent apps
-- Screenshots to Downloads
+- Screenshots to Downloads (PNG, no shadow)
 
 ## Commands
 
@@ -94,6 +104,11 @@ pnpm create vue@latest
 | `home/.zshrc` | `~/.zshrc` |
 | `home/.gitconfig` | `~/.gitconfig` |
 | `home/.vimrc` | `~/.vimrc` |
+| `home/.profile` | `~/.profile` |
+| `home/.nuxtrc` | `~/.nuxtrc` |
 | `config/ghostty/` | `~/.config/ghostty/` |
 | `config/gh/` | `~/.config/gh/` |
-| `vscode/settings.json` | `~/Library/.../Code/User/settings.json` |
+| `config/git/ignore` | `~/.config/git/ignore` |
+| `vscode/settings.json` | `~/Library/Application Support/Code/User/settings.json` |
+| `vscode/keybindings.json` | `~/Library/Application Support/Code/User/keybindings.json` |
+| `vscode/extensions.txt` | *(installed via script)* |
