@@ -147,10 +147,18 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ~="cd ~"
 
-# ls improvements
-alias ll="ls -la"
-alias la="ls -a"
-alias l="ls -lh"
+# ls improvements (use eza if available)
+if command -v eza &> /dev/null; then
+  alias ls="eza"
+  alias ll="eza -la --icons --git"
+  alias la="eza -a --icons"
+  alias l="eza -l --icons"
+  alias lt="eza --tree --level=2 --icons"
+else
+  alias ll="ls -la"
+  alias la="ls -a"
+  alias l="ls -lh"
+fi
 
 # Safety nets
 alias rm="rm -i"
@@ -171,8 +179,18 @@ alias vimrc="vim ~/.vimrc"
 alias zshrc="vim ~/.zshrc"
 alias reload="source ~/.zshrc"
 
-# Helper function
+# Helper functions
 mkcd() { mkdir -p "$1" && cd "$1"; }
+
+# Use bat for cat if available
+if command -v bat &> /dev/null; then
+  alias cat="bat --paging=never"
+fi
+
+# fzf integration
+if command -v fzf &> /dev/null; then
+  source <(fzf --zsh)
+fi
 
 # Better history settings
 HISTSIZE=10000

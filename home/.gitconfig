@@ -1,3 +1,67 @@
 [user]
 	name = Alexander Opalic
 	email = opalic@gmx.net
+
+[init]
+	defaultBranch = main
+
+[core]
+	editor = code --wait
+	autocrlf = input
+	ignorecase = false
+
+[pull]
+	rebase = true
+
+[push]
+	autoSetupRemote = true
+	default = current
+
+[fetch]
+	prune = true
+
+[merge]
+	conflictstyle = diff3
+
+[diff]
+	colorMoved = default
+
+[rebase]
+	autoStash = true
+
+[alias]
+	# Status and logs
+	s = status -sb
+	lg = log --oneline --graph --decorate -20
+	lga = log --oneline --graph --decorate --all -20
+	last = log -1 HEAD --stat
+
+	# Branches
+	co = checkout
+	cob = checkout -b
+	br = branch
+	brd = branch -d
+	brD = branch -D
+
+	# Commits
+	cm = commit -m
+	ca = commit --amend
+	can = commit --amend --no-edit
+
+	# Staging
+	a = add
+	aa = add --all
+	ap = add --patch
+
+	# Stashing
+	st = stash
+	stp = stash pop
+	stl = stash list
+
+	# Reset
+	unstage = reset HEAD --
+	undo = reset --soft HEAD~1
+
+	# Utilities
+	aliases = config --get-regexp alias
+	whoami = config user.email

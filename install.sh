@@ -59,6 +59,14 @@ echo ""
 echo "Setting up VSCode..."
 "$DOTFILES_DIR/scripts/vscode.sh"
 
+# 7. Configure macOS defaults (optional, asks user)
+echo ""
+read -p "Configure macOS system preferences? (y/n) " -n 1 -r
+echo
+if [[ $REPLY =~ ^[Yy]$ ]]; then
+    "$DOTFILES_DIR/scripts/macos.sh"
+fi
+
 echo ""
 echo "========================================"
 echo "  Installation Complete!"
@@ -67,5 +75,6 @@ echo ""
 echo "Next steps:"
 echo "  1. Restart your terminal (or run: source ~/.zshrc)"
 echo "  2. Run 'fnm install --lts' to install Node.js"
-echo "  3. Open VSCode and sign in to sync settings"
+echo "  3. Run 'pnpm create vue@latest' to create a Vue project"
+echo "  4. Open VSCode and sign in to sync settings"
 echo ""

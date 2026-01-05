@@ -1,4 +1,4 @@
-.PHONY: install link brew vscode update help
+.PHONY: install link brew vscode macos update help
 
 help:
 	@echo "Available commands:"
@@ -6,6 +6,7 @@ help:
 	@echo "  make link     - Create symlinks only"
 	@echo "  make brew     - Install Homebrew packages only"
 	@echo "  make vscode   - Setup VSCode only"
+	@echo "  make macos    - Configure macOS system preferences"
 	@echo "  make update   - Export current configs to this repo"
 
 install:
@@ -19,6 +20,9 @@ brew:
 
 vscode:
 	./scripts/vscode.sh
+
+macos:
+	./scripts/macos.sh
 
 update:
 	@echo "Updating Brewfile..."
