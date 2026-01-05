@@ -1,0 +1,304 @@
+{
+  // ─────────────────────────────
+  // UI / Workbench & Window
+  // ─────────────────────────────
+  "workbench.colorTheme": "Night Owl",                 // Theme
+  "workbench.startupEditor": "none",                   // No welcome page
+  "workbench.tips.enabled": false,                     // Disable tip popups
+  "workbench.sideBar.location": "right",               // Sidebar on the right
+  "workbench.activityBar.location": "hidden",          // Hide activity bar
+  "workbench.editor.showTabs": "single",               // Single tab UI
+  "workbench.editor.enablePreviewFromQuickOpen": false,// Opening from quick open doesn't reuse preview
+  "window.nativeTabs": true,                           // macOS native tabs
+
+  // Fine-grained color overrides for the workbench
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#65c89b",
+    "activityBar.activeBorder": "#945bc4",
+    "activityBar.background": "#65c89b",
+    "activityBar.foreground": "#15202b",
+    "activityBar.inactiveForeground": "#15202b99",
+    "activityBarBadge.background": "#945bc4",
+    "activityBarBadge.foreground": "#e7e7e7",
+    "sash.hoverBorder": "#65c89b",
+    "statusBar.background": "#42b883",
+    "statusBar.foreground": "#15202b",
+    "statusBarItem.hoverBackground": "#359268",
+    "statusBarItem.remoteBackground": "#42b883",
+    "statusBarItem.remoteForeground": "#15202b",
+    "titleBar.activeBackground": "#42b883",
+    "titleBar.activeForeground": "#15202b",
+    "titleBar.inactiveBackground": "#42b88399",
+    "titleBar.inactiveForeground": "#15202b99"
+  },
+
+  // ─────────────────────────────
+  // Editor: Typography & Layout
+  // ─────────────────────────────
+  "editor.fontFamily": "Fira Code",                    // Monospace font
+  "editor.fontSize": 16,                               // Editor font size
+  "editor.lineHeight": 45,                             // Generous line height
+  "editor.suggestFontSize": 15,                        // Intellisense font size
+  "editor.suggestLineHeight": 28,                      // Intellisense line height
+  "editor.lineNumbers": "relative",                    // Relative line numbers
+
+  // ─────────────────────────────
+  // Editor: Visuals & Decorations
+  // ─────────────────────────────
+  "editor.minimap.enabled": false,                     // Hide minimap
+  "breadcrumbs.enabled": false,                        // Hide breadcrumbs
+  "scm.diffDecorations": "none",                       // No gutter diff decorations
+  "git.decorations.enabled": false,                    // Hide Git decorations in Explorer
+  "editor.colorDecorators": false,                     // Hide color decorators
+  "editor.renderLineHighlight": "none",                // No current line highlight
+  "editor.overviewRulerBorder": false,                 // Hide overview ruler border
+  "editor.hideCursorInOverviewRuler": true,            // Hide cursor in overview
+  "problems.decorations.enabled": false,               // Hide Problems decorations
+  "editor.renderControlCharacters": false,             // Don't show control chars
+  "editor.renderFinalNewline": "off",                  // Don't render final newline glyph
+  "editor.guides.indentation": false,                  // Hide indent guides
+  "editor.matchBrackets": "never",                     // Disable bracket matching visuals
+  "editor.occurrencesHighlight": "off",                // Disable symbol occurrence highlight
+  "editor.selectionHighlight": false,                  // Disable selection highlight
+  "editor.hover.enabled": "on",                        // Keep hover info enabled
+  "editor.accessibilitySupport": "off",                // Force regular rendering
+
+  // ─────────────────────────────
+  // Editor: IntelliSense & Navigation
+  // ─────────────────────────────
+  "editor.inlineSuggest.enabled": true,                // Inline suggestions (ghost text)
+  "editor.suggestSelection": "first",                  // Select first suggestion by default
+  "editor.quickSuggestions": { "strings": true },      // Suggest in strings too
+
+  // Goto/peek behavior (prefer jumping straight to target)
+  "editor.gotoLocation.multipleReferences": "goto",
+  "editor.gotoLocation.multipleDefinitions": "goto",
+  "editor.gotoLocation.multipleDeclarations": "goto",
+  "editor.gotoLocation.multipleImplementations": "goto",
+  "editor.gotoLocation.multipleTypeDefinitions": "goto",
+
+  // ─────────────────────────────
+  // Files, Search & Notebook
+  // ─────────────────────────────
+  "files.autoSave": "afterDelay",                      // Auto-save after delay
+  "files.associations": {                              // Associate dotfiles with PHP
+    ".php_cs": "php",
+    ".php_cs.dist": "php"
+  },
+  "files.exclude": {                                   // Hide common Java-related metadata
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "search.useIgnoreFiles": false,                      // Don't read .gitignore/.ignore
+  "search.exclude": {                                  // Project search exclusions
+    ".phpunit.result.cache": true,
+    "**/_ide_helper.php": true,
+    "**/build": true,
+    "**/code-docs": true,
+    "**/composer.lock": true,
+    "**/coverage": true,
+    "**/dist": true,
+    "**/node_modules": true,
+    "**/package-lock.json": true,
+    "**/public/{[^i],?[^n]}*": true,
+    "**/vendor/{[^l],?[^ai]}*": true,
+    "storage": true
+  },
+  "editor.wordSeparators": "`~!@#%^&*()=+[{}]\\|;:'\",.<>/?", // Treat - and _ as part of words
+  "notebook.output.textLineLimit": 30000000,           // Huge text output limit (notebooks)
+
+  // ─────────────────────────────
+  // Terminal
+  // ─────────────────────────────
+  "terminal.integrated.fontSize": 15,
+  "terminal.integrated.lineHeight": 1.5,
+  "terminal.integrated.env.osx": {
+    "FIG_NEW_SESSION": "1"
+  },
+
+  // ─────────────────────────────
+  // Linting & Formatting (global)
+  // ─────────────────────────────
+  "eslint.format.enable": true,                        // Let ESLint format when asked
+  "eslint.validate": ["javascript"],                   // ESLint applies to JS
+  "editor.codeActionsOnSave": {                        // Fix ESLint issues explicitly
+    "source.fixAll.eslint": "explicit"
+  },
+  "prettier.requireConfig": true,                      // Only format if config exists
+  "prettier.useEditorConfig": false,                   // Ignore .editorconfig for Prettier
+  "prettier.embeddedLanguageFormatting": "off",        // Don't format embedded blocks
+
+  // ─────────────────────────────
+  // Language-specific overrides
+  // ─────────────────────────────
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": false                       // Avoid accidental large diffs
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"// Use ESLint to format TS
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "Vue.volar"
+  },
+  "[python]": {
+    "editor.formatOnType": true                        // Format as you type in Python
+  },
+  "[php]": {
+    "editor.defaultFormatter": "junstyle.php-cs-fixer" // Use PHP CS Fixer
+  },
+
+  // ─────────────────────────────
+  // Tailwind / Frameworks
+  // ─────────────────────────────
+  "tailwindCSS.includeLanguages": { "fusion": "html" },// Map custom lang to HTML
+
+  // ─────────────────────────────
+  // Git & Collaboration
+  // ─────────────────────────────
+  "git.enableSmartCommit": true,                       // Allow commit without staging
+  "git.confirmSync": false,                            // Don't prompt on sync
+  "git.openRepositoryInParentFolders": "never",        // Don't auto-open parent repos
+
+  // ─────────────────────────────
+  // AI / Assistants
+  // ─────────────────────────────
+  "github.copilot.enable": {                           // Enable Copilot broadly
+    "*": true,
+    "plaintext": true,
+    "markdown": false,
+    "scminput": false,
+    "yaml": false
+  },
+  "chat.tools.autoApprove": true,
+  "chat.agent.maxRequests": 100,
+
+  // ─────────────────────────────
+  // Extension-specific tweaks
+  // ─────────────────────────────
+  "errorLens.excludeBySource": [                       // Mute specific ESLint rules in UI
+    "eslint(jest/expect-expect)",
+    "eslint(no-console)"
+  ],
+  "redhat.telemetry.enabled": true,                    // Enable telemetry for Red Hat ext
+  "extensions.ignoreRecommendations": true,            // Don't show extension recs
+  "http.systemCertificates": false,                    // Don't use system certs (HTTP ext)
+
+  "vim.leader": "<Space>",
+  // ─────────────────────────────
+  // Keybindings (Vim extension)
+  // ─────────────────────────────
+  "vim.insertModeKeyBindings": [                       // jj to exit insert mode
+    { "before": ["j", "j"], "after": ["<Esc>"] }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+      {
+            "before": ["<leader>", "m"],
+            "commands": [
+                "bookmarks.toggle"
+            ]
+        },
+        {
+            "before": ["<leader>", "b"],
+            "commands": [
+                "bookmarks.list"
+            ]
+        },
+      {
+      "before": ["<Leader>", "p"],
+      "commands": [
+          "workbench.action.showCommands",
+      ]
+    },
+    {
+      "before": ["<Leader>", "t"],
+      "commands": [
+          "workbench.action.gotoSymbol",
+      ]
+    },
+     {
+      "before": ["<Leader>", "t", "t"],
+      "commands": [":tabnew"]
+    },
+    {
+      "before": ["<Leader>", "t", "n"],
+      "commands": [":tabnext"]
+    },
+    {
+      "before": ["<Leader>", "t", "p"],
+      "commands": [":tabprev"]
+    },
+    {
+      "before": ["<Leader>", "t", "o"],
+      "commands": [":tabo"]
+    },
+     { "before": ["<C-h>"], "after": ["<C-w>", "h"] },
+    { "before": ["<C-j>"], "after": ["<C-w>", "j"] },
+    {
+      "before": ["<C-k>"],
+      "after": ["<C-w>", "k"]
+    },
+    {
+      "before": ["<C-l>"],
+      "after": ["<C-w>", "l"]
+    },
+    {
+      "before": ["<Leader>", "j"],
+      "after": ["J"]
+    },
+     {
+      "before": ["J"],
+      "after": ["5", "j"]
+    },
+    {
+      "before": ["K"],
+      "after": ["5", "k"]
+    },
+    { "before": ["g", "c", "c"], "commands": ["editor.action.commentLine"] },
+    { "before": ["g", "F"], "commands": ["outline.focus"] },
+     {
+    "before": ["g", "<space>", "e"],
+    "commands": [
+      "workbench.view.explorer",
+      "workbench.files.action.focusFilesExplorer"
+    ]
+  },
+    { "before": ["g", "<space>", "c", "c"], "commands": ["editor.action.commentLine"] }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    { "before": ["g", "c"], "commands": ["editor.action.commentLine"] },
+    { "before": ["g", "d"], "commands": ["editor.action.revealDefinition"] },
+    { "before": ["g", "r"], "commands": ["editor.action.referenceSearch.trigger"] }
+  ],
+  "vim.camelCaseMotion.enable": true,
+  "vim.foldfix": true,
+  "outline.showClasses": false,
+  "outline.showVariables": false,
+  "outline.showFields": false,
+  "outline.showEnums": false,
+  "outline.showInterfaces": false,
+  "outline.showProperties": false,
+  "outline.showTypeParameters": false,
+  "outline.showEvents": false,
+  "outline.showConstructors": false,
+  "outline.showMethods": true,
+  "outline.showFunctions": true,
+  "totalTypeScript.hideAllTips": true,
+  "totalTypeScript.hideBasicTips": true,
+  "vim.easymotion": true,
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "chat.tools.terminal.autoApprove": {
+    "pnpm": true
+  },
+  "chat.tools.urls.autoApprove": {
+    "https://claude.com": {
+      "approveRequest": false,
+      "approveResponse": true
+    }
+  },
+}

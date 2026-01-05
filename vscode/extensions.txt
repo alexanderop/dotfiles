@@ -1,0 +1,11 @@
+antfu.slidev
+anthropic.claude-code
+astro-build.astro-vscode
+bierner.markdown-mermaid
+dbaeumer.vscode-eslint
+github.copilot
+github.copilot-chat
+sdras.night-owl
+unifiedjs.vscode-mdx
+vscodevim.vim
+vue.volar

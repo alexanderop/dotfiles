@@ -1,0 +1,150 @@
+[
+  // ─────────────────────────────
+  // Layout & Panel Toggles
+  // ─────────────────────────────
+  {
+    "key": "cmd+j",
+    "command": "workbench.action.toggleAuxiliaryBar"
+  },
+  {
+    "key": "ctrl+cmd+j",
+    "command": "workbench.action.togglePanel"
+  },
+  {
+    "key": "ctrl+shift+c",
+    "command": "workbench.action.toggleCenteredLayout",
+    "when": "!isAuxiliaryWindowFocusedContext"
+  },
+
+  // ─────────────────────────────
+  // Terminal
+  // ─────────────────────────────
+  {
+    "key": "cmd+t",
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+
+  // ─────────────────────────────
+  // Navigation
+  // ─────────────────────────────
+
+  // Neovim-style pane navigation
+  { "key": "ctrl+h", "command": "workbench.action.focusLeftGroup",  "when": "!terminalFocus" },
+  { "key": "ctrl+j", "command": "workbench.action.focusBelowGroup", "when": "!terminalFocus" },
+  { "key": "ctrl+k", "command": "workbench.action.focusAboveGroup", "when": "!terminalFocus" },
+  { "key": "ctrl+l", "command": "workbench.action.focusRightGroup", "when": "!terminalFocus" },
+
+  { "key": "ctrl+shift+right", "command": "workbench.action.splitEditorRight" },
+  { "key": "ctrl+shift+down", "command": "workbench.action.splitEditorDown" },
+  { "key": "ctrl+shift+t", "command": "workbench.action.quickOpenTerm", "when": "terminalHasBeenCreated || terminalProcessSupported" },
+
+  {
+    "key": "cmd+g c",
+    "command": "workbench.action.closeActiveEditor",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+space e c",
+    "command": "workbench.view.explorer",
+    "when": "!editorTextFocus"
+  },
+
+  // Explorer + GitLens
+  {
+    "key": "shift+cmd+e",
+    "command": "workbench.explorer.fileView.focus"
+  },
+  {
+    "key": "ctrl+cmd+h",
+    "command": "gitlens.views.fileHistory.focus"
+  },
+
+  // Vim-like navigation in explorer
+  { "key": "j", "command": "list.focusDown", "when": "explorerViewletVisible && listFocus && !inputFocus" },
+  { "key": "k", "command": "list.focusUp",   "when": "explorerViewletVisible && listFocus && !inputFocus" },
+  { "key": "h", "command": "list.collapse",  "when": "explorerViewletVisible && listFocus && !inputFocus" },
+  { "key": "l", "command": "list.select",    "when": "explorerViewletVisible && listFocus && !inputFocus" },
+  { "key": "o", "command": "list.toggleExpand", "when": "explorerViewletVisible && listFocus && !inputFocus" },
+  { "key": "escape", "command": "workbench.action.closeSidebar", "when": "sideBarFocus && !inputFocus" },
+
+  // ─────────────────────────────
+  // Editor Actions
+  // ─────────────────────────────
+  {
+    "key": "shift+cmd+7",
+    "command": "editor.action.commentLine",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+shift+l",
+    "command": "editor.action.smartSelect.expand",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+h",
+    "command": "editor.action.showHover",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+k cmd+i",
+    "command": "-editor.action.showHover",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+l",
+    "command": "expandLineSelection",
+    "when": "textInputFocus"
+  },
+
+  // ─────────────────────────────
+  // Formatting & Linting
+  // ─────────────────────────────
+  {
+    "key": "ctrl+cmd+o",
+    "command": "eslint.executeAutofix"
+  },
+
+  // ─────────────────────────────
+  // Markdown Preview
+  // ─────────────────────────────
+  {
+    "key": "ctrl+shift+s",
+    "command": "markdown.showSource"
+  },
+  {
+    "key": "ctrl+shift+p",
+    "command": "markdown.showPreview",
+    "when": "!notebookEditorFocused && editorLangId == 'markdown'"
+  },
+
+  // ─────────────────────────────
+  // Git / Custom
+  // ─────────────────────────────
+  {
+    "key": "cmd+m",
+    "command": "git.checkout",
+    "when": "!operationInProgress"
+  },
+
+  // ─────────────────────────────
+  // Font size toggle (custom)
+  // ─────────────────────────────
+  {
+    "key": "cmd+[BracketLeft]",
+    "command": "toggle",
+    "when": "editorTextFocus",
+    "args": {
+      "id": "fontSize",
+      "value": [
+        {
+          "editor.fontSize": 18,
+          "editor.lineHeight": 45
+        },
+        {
+          "editor.fontSize": 16,
+          "editor.lineHeight": 0
+        }
+      ]
+    }
+  }
+]
