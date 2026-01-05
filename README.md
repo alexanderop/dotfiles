@@ -6,7 +6,7 @@ Personal configuration files for macOS development.
 
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/config.git ~/projects/config
+git clone https://github.com/alexanderop/dotfiles.git ~/projects/config
 
 # Run the installer
 cd ~/projects/config
@@ -19,6 +19,19 @@ cd ~/projects/config
 - Zsh with Oh My Zsh (robbyrussell theme)
 - Plugins: git, z, zsh-autosuggestions, zsh-syntax-highlighting, zsh-completions
 - Custom aliases for navigation, git, and safety
+- fzf integration (Ctrl+R history, Ctrl+T files)
+- eza/bat for better ls/cat
+
+### Git
+- Sensible defaults (rebase on pull, auto-upstream)
+- 20+ aliases (`git s`, `git lg`, `git cob`, `git undo`, etc.)
+- VSCode as default editor
+
+### Terminal (Ghostty)
+- JetBrains Mono font
+- Catppuccin Mocha theme
+- Quick terminal (Cmd+`) drop-down
+- Split panes and tab keybindings
 
 ### Editor (VSCode)
 - Night Owl theme with Fira Code font
@@ -26,37 +39,52 @@ cd ~/projects/config
 - Minimalist UI (no minimap, breadcrumbs, or decorations)
 
 ### CLI Tools (via Homebrew)
-- `gh` - GitHub CLI
-- `ripgrep` - Fast text search
 - `fnm` - Fast Node Manager
-- `pnpm` - Package manager
-- `ast-grep` - AST-based code search
-- `tree` - Directory visualization
+- `pnpm`, `yarn` - Package managers
+- `gh` - GitHub CLI
+- `ripgrep`, `fd` - Fast search
+- `fzf` - Fuzzy finder
+- `bat`, `eza` - Better cat/ls
+- `jq`, `httpie` - JSON/API tools
 
 ### Applications
 - Ghostty (terminal)
-- Obsidian (notes)
 - VSCode (editor)
-- Claude Code
-- OpenCode Desktop
+- Obsidian (notes)
+- Raycast (launcher)
+- Rectangle (window management)
+- Arc (browser)
+- Claude Code, OpenCode
 
-## Manual Commands
+### macOS Defaults
+- Fast key repeat
+- Tap to click
+- Finder: show extensions, path bar, list view
+- Dock: auto-hide, no recent apps
+- Screenshots to Downloads
+
+## Commands
 
 ```bash
-# Install everything
-make install
+make install   # Full installation
+make link      # Create symlinks only
+make brew      # Install Homebrew packages only
+make vscode    # Setup VSCode only
+make macos     # Configure macOS preferences
+make update    # Export current config to repo
+```
 
-# Just create symlinks
-make link
+## After Installation
 
-# Just install Homebrew packages
-make brew
+```bash
+# 1. Restart terminal or reload
+source ~/.zshrc
 
-# Just setup VSCode
-make vscode
+# 2. Install Node.js
+fnm install --lts
 
-# Export current config to update this repo
-make update
+# 3. Create a Vue project
+pnpm create vue@latest
 ```
 
 ## File Structure
@@ -66,15 +94,6 @@ make update
 | `home/.zshrc` | `~/.zshrc` |
 | `home/.gitconfig` | `~/.gitconfig` |
 | `home/.vimrc` | `~/.vimrc` |
-| `home/.nuxtrc` | `~/.nuxtrc` |
-| `home/.profile` | `~/.profile` |
+| `config/ghostty/` | `~/.config/ghostty/` |
 | `config/gh/` | `~/.config/gh/` |
-| `config/git/` | `~/.config/git/` |
 | `vscode/settings.json` | `~/Library/.../Code/User/settings.json` |
-| `vscode/keybindings.json` | `~/Library/.../Code/User/keybindings.json` |
-
-## After Installation
-
-1. Restart your terminal (or run `source ~/.zshrc`)
-2. Install Node.js: `fnm install --lts`
-3. Open VSCode and sign in to sync any remaining settings
