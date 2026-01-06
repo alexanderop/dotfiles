@@ -25,14 +25,14 @@ cursor-style = block
 cursor-style-blink = false
 
 # Scrollback
-scrollback-limit = 10000
+scrollback-limit = 10000000
 
 # Mouse
 mouse-hide-while-typing = true
 copy-on-select = clipboard
 
 # Shell integration
-shell-integration-features = cursor
+shell-integration-features = cursor,sudo,title
 
 # Unfocused splits - subtle dimming for heavy split usage
 unfocused-split-opacity = 0.85
@@ -89,3 +89,8 @@ keybind = cmd+zero=reset_font_size
 
 # Misc
 keybind = shift+enter=text:\x1b\r
+
+# Claude Code workflow
+keybind = cmd+[=jump_to_prompt:-1
+keybind = cmd+]=jump_to_prompt:1
+keybind = cmd+shift+s=write_scrollback_file:paste

@@ -26,8 +26,11 @@ brew "tldr"          # Simplified man pages
 
 # Code quality
 brew "pmd"           # Code quality analyzer
+brew "pre-commit"    # Git hooks framework
+brew "gitleaks"      # Secret scanning
 
 # Node.js / JavaScript
+brew "nvm"           # Node Version Manager
 brew "fnm"           # Fast Node Manager (manages node versions + npm)
 brew "pnpm"          # Fast package manager
 brew "yarn"          # Alternative package manager
