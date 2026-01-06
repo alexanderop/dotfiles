@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-DOTFILES_DIR="$HOME/projects/config"
+DOTFILES_DIR="$HOME/dotfiles"
 cd "$DOTFILES_DIR"
 
 echo "========================================"
