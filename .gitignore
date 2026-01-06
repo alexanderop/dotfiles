@@ -3,3 +3,31 @@
 
 # Backups created by install script
 *.backup
+
+# Secrets and environment files
+.env
+.env.*
+*.local
+.secrets
+**/secrets/
+.local/bin/env
+
+# SSH and GPG keys
+id_rsa*
+id_ed25519*
+*.pem
+*.key
+secring.gpg
+
+# Token/credential files
+.netrc
+.npmrc.local
+.pypirc
+gh/hosts.yml
+.docker/config.json
+
+# Editor local files
+.vscode/.ropeproject
+*.swp
+*.swo
+*~

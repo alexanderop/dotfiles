@@ -56,6 +56,10 @@ keybind = cmd+shift+right=next_tab
 # Splits - create
 keybind = cmd+d=new_split:right
 keybind = cmd+shift+d=new_split:down
+keybind = ctrl+alt+left=new_split:left
+keybind = ctrl+alt+right=new_split:right
+keybind = ctrl+alt+up=new_split:up
+keybind = ctrl+alt+down=new_split:down
 
 # Splits - vim-style navigation (direct)
 keybind = ctrl+h=goto_split:left
