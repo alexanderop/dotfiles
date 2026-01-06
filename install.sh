@@ -59,7 +59,12 @@ echo ""
 echo "Setting up VSCode..."
 "$DOTFILES_DIR/scripts/vscode.sh"
 
-# 7. Configure macOS defaults (optional, asks user)
+# 7. Setup Claude Code
+echo ""
+echo "Setting up Claude Code..."
+"$DOTFILES_DIR/scripts/claude.sh"
+
+# 8. Configure macOS defaults (optional, asks user)
 echo ""
 read -p "Configure macOS system preferences? (y/n) " -n 1 -r
 echo
@@ -77,4 +82,5 @@ echo "  1. Restart your terminal (or run: source ~/.zshrc)"
 echo "  2. Run 'fnm install --lts' to install Node.js"
 echo "  3. Run 'pnpm create vue@latest' to create a Vue project"
 echo "  4. Open VSCode and sign in to sync settings"
+echo "  5. Claude Code skills and commands are ready to use"
 echo ""

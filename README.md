@@ -47,6 +47,13 @@ cd ~/projects/config
 - Minimalist UI (no minimap, breadcrumbs, or decorations)
 - Extensions: Volar (Vue), ESLint, Copilot, Astro, MDX, Mermaid, Slidev
 
+### Claude Code
+- Custom skills: c4-architecture, frontend-design, skill-creator, conversation-search
+- Slash commands: /check, /fix-pipeline, /interview, /learn, /pr, /push, /review-coderabbit
+- Review agents: accessibility, architecture, performance, security, typescript, vue, vueuse
+- Claude Memory settings
+- Template CLAUDE.md for new projects
+
 ### CLI Tools (via Homebrew)
 - `fnm` - Fast Node Manager
 - `pnpm`, `yarn` - Package managers
@@ -80,6 +87,7 @@ make install   # Full installation
 make link      # Create symlinks only
 make brew      # Install Homebrew packages only
 make vscode    # Setup VSCode only
+make claude    # Setup Claude Code only
 make macos     # Configure macOS preferences
 make update    # Export current config to repo
 ```
@@ -112,3 +120,9 @@ pnpm create vue@latest
 | `vscode/settings.json` | `~/Library/Application Support/Code/User/settings.json` |
 | `vscode/keybindings.json` | `~/Library/Application Support/Code/User/keybindings.json` |
 | `vscode/extensions.txt` | *(installed via script)* |
+| `claude/settings.json` | `~/.claude/settings.json` |
+| `claude/skills/` | `~/.claude/skills/` |
+| `claude/commands/` | `~/.claude/commands/` |
+| `claude/agents/` | `~/.claude/agents/` |
+| `claude-mem/settings.json` | `~/.claude-mem/settings.json` |
+| `templates/CLAUDE.md` | *(template for new projects)* |
