@@ -110,6 +110,11 @@ source $ZSH/oh-my-zsh.sh
 # Increase file descriptor limit for dev servers (Nuxt/Vite)
 ulimit -n 65536
 
+# Bluesky API credentials (for vue-newsletter skill)
+export BLUESKY_HANDLE="alexvue.bsky.social"
+# App password loaded from ~/.secrets (not committed)
+[[ -f ~/.secrets ]] && source ~/.secrets
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -205,7 +210,7 @@ fi
 eval "$(fnm env)"
 
 # bun completions
-[ -s "/Users/alex/.bun/_bun" ] && source "/Users/alex/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
@@ -215,7 +220,7 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 export ENABLE_LSP_TOOL=1
 
 # pnpm
-export PNPM_HOME="/Users/alex/Library/pnpm"
+export PNPM_HOME="$HOME/Library/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
@@ -225,3 +230,9 @@ esac
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Enable vim keybindings
+set -o vi
+
+# Kill all tmux sessions
+alias tkill="tmux kill-server"

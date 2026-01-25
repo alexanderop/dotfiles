@@ -301,4 +301,5 @@
       "approveResponse": true
     }
   },
+  "chat.tools.terminal.outputLocation": "chat",
 }

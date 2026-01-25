@@ -1,0 +1,9 @@
+# Vue Newsletter Skill - Python Dependencies
+# All scripts use Python stdlib only, no external dependencies required.
+# Python 3.8+ recommended.
+
+# Optional: For Reddit integration (fetch_reddit_posts.py - not yet implemented)
+# praw>=7.7.0
+
+# Optional: For better date parsing
+# python-dateutil>=2.8.0
